@@ -23,7 +23,7 @@ For the sake of ease, we initialise that in the Form1\_Load method. It takes sev
 - walletPassword: This is the password that encrypts the wallet. It is not used for game wallets, but is used for vault wallets. It&#39;s not used in the sample application.
 - rpcRequestTimeoutInSeconds: This is a simple timeout. You can set this as you wish.
 
-These can be set in the app.config file in &quot;&lt;appSettings\&gt;&quot;.
+These can be set in the app.config file in &quot;&lt;appSettings&gt;&quot;.
 
 	  <appSettings>
 	
@@ -49,10 +49,8 @@ The RPC username and password come from the .cookie file in the %APPDATA%\Xaya f
 The sample application uses the CookieReader class to get those values.
 
 	CookieReader cookie = new CookieReader();
-	
-	Console.WriteLine(&quot;Username = &quot; + cookie.Username);
-	
-	Console.WriteLine(&quot;Userpassword = &quot; + cookie.Userpassword);
+	Console.WriteLine("Username = " + cookie.Username);
+	Console.WriteLine("Userpassword = " + cookie.Userpassword);
 
 You can set the XAYAService parameters however you wish. The sample application shows more than 1 way to do it. The most important parameter is the rpcPassword as the XAYA Electron wallet resets its password on every restart. So, if you hard code a value, and restart the Electron wallet, the password will have changed. As such, something similar to the CookieReader is useful to get the correct password.
 
@@ -140,7 +138,7 @@ The return value for a name\_register operation (the underlying operation in the
 
 Here&#39;s how easy it is to register a new name and display the result:
 
-	string r = xayaCoinService.RegisterName(txtRegisterName.Text, &quot;{}&quot;, newobject());
+	string r = xayaCoinService.RegisterName(txtRegisterName.Text, "{}", newobject());
 	txtRegisterNameResult.Text = r.ToString();
 
 The txid result will look like "[baa1a0e75b3ccda1c26336291b1f181cae3f98c8aae31ad7b0371f2725649c4d](https://explorer.xaya.io/tx/baa1a0e75b3ccda1c26336291b1f181cae3f98c8aae31ad7b0371f2725649c4d)". 
