@@ -96,17 +96,12 @@ ShowName runs the name\_show method available in the daemon. It&#39;s trivial to
 
 Accessing the data is equally easy:
 
-	txtShowNameResult.Text += r.name + &quot;\r\n&quot;
-	
-	    + &quot;\tismine = &quot; + r.ismine + &quot;\r\n&quot;
-	
-	    + &quot;\tvalue = &quot; + r.value + &quot;\r\n&quot;
-	
-	    + &quot;\ttxid = &quot; + r.txid + &quot;\r\n&quot;
-	
-	    + &quot;\theight = &quot; + r.height + &quot;\r\n&quot;
-	
-	    + &quot;\taddress = &quot; + r.address + &quot;\r\n&quot;;
+	txtShowNameResult.Text += r.name + "\r\n"
+	    + "\tismine = " + r.ismine + "\r\n"
+	    + "\tvalue = " + r.value + "\r\n"
+	    + "\ttxid = " + r.txid + "\r\n"
+	    + "\theight = " + r.height + "\r\n"
+	    + "\taddress = " + r.address + "\r\n";
 
 You can try adding in some more data on your own there (intellisense is your friend). 
 
